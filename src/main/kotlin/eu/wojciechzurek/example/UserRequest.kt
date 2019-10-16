@@ -1,6 +1,6 @@
 package eu.wojciechzurek.example
 
-data class User(
+data class UserRequest(
         val name: String,
         val age: Int
 )
