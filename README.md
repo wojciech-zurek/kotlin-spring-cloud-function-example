@@ -28,7 +28,7 @@ There are also examples with flux - reactive type.
 
 #### /upperCase (bean, function)
 
-```console
+```bash
     echo "Hello World" | http POST :8080/upperCase
     HTTP/1.1 200 OK
     Content-Length: 12
@@ -42,7 +42,7 @@ There are also examples with flux - reactive type.
 
 #### /lowerCase (bean, function with reactive flux)
 
-```console
+```bash
     echo "Hello World" | http POST :8080/lowerCase
     HTTP/1.1 200 OK
     Content-Length: 17
@@ -58,7 +58,7 @@ There are also examples with flux - reactive type.
 
 #### /user (function with reactive flux)
 
-```console
+```bash
     http POST :8080/user name=admin age=30
     HTTP/1.1 200 OK
     Content-Length: 34
@@ -78,7 +78,7 @@ There are also examples with flux - reactive type.
 
 #### /log (consumer)
 
-```console
+```bash
     echo "Message to log" | http POST :8080/log
     HTTP/1.1 200 OK
     content-length: 0
@@ -86,7 +86,7 @@ There are also examples with flux - reactive type.
 
 #### /reverse (function with reactive flux)
 
-```console
+```bash
     echo "Message to reverse" | http POST :8080/reverse
     HTTP/1.1 200 OK
     Content-Length: 24
@@ -102,7 +102,7 @@ There are also examples with flux - reactive type.
 
 #### /statistic (function)
 
-```console
+```bash
     echo "Sample message" | http POST :8080/statistic
     HTTP/1.1 200 OK
     Content-Length: 56
@@ -126,7 +126,7 @@ There are also examples with flux - reactive type.
 
 #### /unixTime (supplier)
 
-```console
+```bash
     http :8080/unixTime  
     HTTP/1.1 200 OK
     Content-Length: 10
