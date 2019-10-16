@@ -1,5 +1,6 @@
 # kotlin-spring-cloud-function-example
 Kotlin spring cloud function example with different types of creation function, supplier and consumer.
+This example also contains Kotlin lambdas configured as Spring beans.
 There are also examples with flux - reactive type.
 
 ## Download
@@ -136,5 +137,41 @@ There are also examples with flux - reactive type.
     user-agent: HTTPie/1.0.3
     
     1571218287
+```
+
+#### /pi (Kotlin lambda bean, supplier)
+
+```bash
+    http :8080/pi            
+    HTTP/1.1 200 OK
+    Content-Length: 17
+    Content-Type: application/json;charset=UTF-8
+    accept-encoding: gzip, deflate
+    connection: keep-alive
+    user-agent: HTTPie/1.0.3
+    
+    3.141592653589793
+```
+
+#### /square (Kotlin lambda bean, function)
+
+```bash
+    echo 12 | http :8080/square
+    HTTP/1.1 200 OK
+    Content-Length: 3
+    Content-Type: application/json;charset=UTF-8
+    accept-encoding: gzip, deflate
+    connection: keep-alive
+    user-agent: HTTPie/1.0.3
+    
+    144
+```
+
+#### /stupid (Kotlin lambda bean, consumer)
+
+```bash
+    echo "Test" | http :8080/stupid
+    HTTP/1.1 200 OK
+    content-length: 0
 ```
 
